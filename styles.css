@@ -38,6 +38,7 @@ h1, h2 {
     height: 2px;
 }
 /* responsive navbar */
+
 .drop-container{
     display: none;
 }
@@ -53,6 +54,7 @@ h1, h2 {
     background-image: url(./images/bg-pattern-mobile-nav.svg);
     background-repeat: no-repeat;
     background-position: bottom;
+    background-size: 100%;
     padding: 10% 0 80%;
     color: white;
 }
@@ -158,7 +160,6 @@ nav li:hover {
 } 
 
 
-
 /* first section - intro */
 
 #intro {
@@ -169,7 +170,6 @@ nav li:hover {
     display: flex;
     padding: 5% 10% 0%;
     justify-content: space-between;
- 
     align-items: center;
 }
 
@@ -233,7 +233,7 @@ button:hover {
 
 #features .item {
     padding: 0 30px 0 0 ;
-    flex: 0 0 33.33333%;  /* Change!! */
+    flex: 0 0 33.33333%;
     
 }
 #features h4 {
@@ -292,9 +292,7 @@ footer {
 .socials {
     width: 200px;
 }
-ul li a img:hover .icon{
-fill: red;
-}
+
 .socials li{
     display: inline;
     padding: 0 3%;
@@ -343,14 +341,11 @@ footer li a:hover {
         top: 0;
     }
 
-    header {
-        flex-direction: column;
-    }   
     .intro-text {
         padding: 10% 4%;
         margin-top: 0;
     }
-    .features-items-container {
+    .features-items-container, header {
         flex-direction: column;
         align-items: center;
     }
@@ -386,19 +381,18 @@ footer li a:hover {
             padding: 0;
         }
 
-    .work-container{
-        flex-direction: column;
-        text-align: center;
-        background-image: url(./images/bg-pattern-how-we-work-mobile.svg);
-        background-position: top right;
-        font-size: 0.8em;
-        padding: 17% 10%;
-        margin: 25% auto; 
-    }
-
     .intro-text, 
     h2{ 
     text-align: center;
+    }
+    h1.line:before {
+        display: none;
+    }
+    .line:before {
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
     }
 
     .intro-mobile-background {
@@ -410,6 +404,20 @@ footer li a:hover {
     .intro-img{
         top: 0;
     }
+    #features .item{
+        padding: 0;
+    }
+
+    .work-container{
+        flex-direction: column;
+        text-align: center;
+        background-image: url(./images/bg-pattern-how-we-work-mobile.svg);
+        background-position: top right;
+        font-size: 0.8em;
+        padding: 17% 10%;
+        margin: 25% auto; 
+    }
+
     .bottom,
     .top{
         flex-direction: column;
@@ -429,20 +437,6 @@ footer li a:hover {
     }
     .bottom h5  {
         padding: 10%;
-    }
-
-    h1.line:before {
-        display: none;
-    }
-    .line:before {
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-
-    }
-    #features .item{
-        padding: 0;
     }
 }
 
