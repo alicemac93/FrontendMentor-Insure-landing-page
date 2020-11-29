@@ -1,0 +1,448 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* main */
+
+body {
+    font-family: "Karla";
+}
+
+li {
+    list-style-type: none;
+}
+
+p {
+    line-height: 2rem;
+}
+
+h1, h2 {
+    font-family: 'DM Serif Display';
+    font-size: 4vw;
+    padding: 3% 0 2%;  
+}
+
+.line{
+    position: relative;
+}
+.line:before {
+    content: "";
+    background-color: darkgray;
+    position: absolute;
+    top: -20px;
+    color: darkgray;
+    width: 120px;
+    height: 2px;
+}
+/* responsive navbar */
+.drop-container{
+    display: none;
+}
+.active {
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 53px;
+    width: 100%;
+    background-color:hsl(270, 9%, 17%);
+    background-image: url(./images/bg-pattern-mobile-nav.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 10% 0 80%;
+    color: white;
+}
+.navbar-toggle {
+    cursor: pointer;
+}
+.toggle-icon{
+    position: absolute;
+    right: 5%;
+    top: 10%;
+}
+
+.drop-container li {
+    padding: 3% 10%; 
+    display: block; 
+}
+.drop-container li:last-child a {
+    padding: 3% 33%;
+    border: 1px solid white;
+}
+
+.drop-container li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+/* absolute images */
+.wrapper{
+    position: relative;
+}
+.img-intro-left{
+    position: absolute;
+    left: 0%;
+    top: 70%;
+    z-index: 12;
+    height: 80%;
+    width: auto;
+}
+
+.img-intro-right{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    z-index: 12;
+    height: 80%;
+    width: auto;
+}
+.desktop-intro-image{
+    height: 80%;
+    width: auto;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 10%;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.nav_links li, 
+.nav_links a, 
+.cta button {
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 300ms linear;
+    display: inline-block;
+    padding: 0px 5px;
+}
+
+.nav_links li a {
+    color: black;
+}
+.nav_links li a:hover {
+    color: darkgrey;
+}
+
+nav li:hover {
+    cursor: pointer;
+}
+
+.cta button {
+    background-color: black;
+    padding: 5px;
+    color: white;
+    border: none;
+    width: 100px;
+    transition: all 300ms linear;
+}
+.cta button:hover {
+    cursor: pointer;
+    color: darkgrey;
+} 
+
+
+
+/* first section - intro */
+
+#intro {
+    background-color: hsl(256, 26%, 20%);
+    color: white;
+}
+.intro-container{
+    display: flex;
+    padding: 5% 10% 0%;
+    justify-content: space-between;
+ 
+    align-items: center;
+}
+
+.intro-img{
+    position: relative;
+    top: 120px;
+    z-index: 10;
+    flex: 0 0 50%;
+    overflow: visible;
+}
+.intro-mobile-background{
+    height: auto;
+}
+.intro-img img {
+    max-width: 100%; 
+    display: block; 
+    height: auto;
+}
+
+.intro-text{
+    text-align: left;
+    padding: 12% 5%;
+    flex: 0 0 50%; 
+}
+
+.intro-mobile-img{
+    position: absolute;
+    bottom: -25%;
+    right: 0;
+}
+
+button {
+    margin: 5% 0;
+    padding: 7px 12px ;
+    background-color: white;
+    border: none;
+    border-radius: 2px;
+    transition: all 300ms ease;
+    width: 150px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: hsl(256, 26%, 20%);
+    border: 1px solid white;
+    color: white;
+}
+
+/* features */
+
+.features-container {
+    padding: 17% 10% 10%;
+}
+
+.features-items-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    padding-top: 5%;
+}
+
+#features .item {
+    padding: 0 30px 0 0 ;
+    flex: 0 0 33.33333%;  /* Change!! */
+    
+}
+#features h4 {
+    font-family: 'DM Serif Display';
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 4% 0;
+}
+
+#features img {
+    padding: 8% 0;
+}
+
+/* CTA */
+
+.work-container{
+    color: white;
+    background-color: hsl(256, 26%, 20%);
+    background-image: url(./images/bg-pattern-how-we-work-desktop.svg);
+    background-position: right;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    padding: 3%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.work-container h3 {
+    font-family: 'DM Serif Display';
+    font-weight: 700;
+    font-size: 3em;
+    flex-shrink: 2;
+}
+
+/* footer */
+
+footer {
+    background-color: hsl(0, 0%, 98%);
+    background-image: url(./images/bg-pattern-footer-desktop.svg);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    margin-top: 10%;
+    padding: 3% 10%;
+}
+
+.top {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 2%;
+}
+
+.socials {
+    width: 200px;
+}
+ul li a img:hover .icon{
+fill: red;
+}
+.socials li{
+    display: inline;
+    padding: 0 3%;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 20% 0 0;
+    border-top: .5px solid lightgray;
+}
+
+.bottom h5 {
+    padding: 20% 0;
+    text-transform: uppercase;
+    color: darkgray;
+    font-size: 1rem;
+}
+
+footer li a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    line-height: 2em;
+}
+
+footer li a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* media queries */
+
+@media screen and (min-width: 750px){
+    .navbar-toggle {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .desktop-nav, .absolute-images {
+        display: none;
+    }  
+    .intro-img{
+        top: 0;
+    }
+
+    header {
+        flex-direction: column;
+    }   
+    .intro-text {
+        padding: 10% 4%;
+        margin-top: 0;
+    }
+    .features-items-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #intro, .bottom, .top {
+        padding: 10% 0%;
+        margin: 0;
+    }
+    #features .item {
+        text-align: center;
+        line-height: 1rem;
+    }
+    .desktop-intro-image{
+        display: none;
+    }
+    h1, h2 {
+        font-size: 2rem;
+    }
+}
+@media screen and (min-width: 480px){
+.intro-mobile-img {
+    display: none;
+}
+}
+
+@media screen and (max-width: 480px){
+    .mobile-button {
+        background-color: hsl(256, 26%, 20%);
+        border: 1px solid white;
+        color: white;}
+
+    .intro-container{
+            flex-direction: column-reverse;
+            padding: 0;
+        }
+
+    .work-container{
+        flex-direction: column;
+        text-align: center;
+        background-image: url(./images/bg-pattern-how-we-work-mobile.svg);
+        background-position: top right;
+        font-size: 0.8em;
+        padding: 17% 10%;
+        margin: 25% auto; 
+    }
+
+    .intro-text, 
+    h2{ 
+    text-align: center;
+    }
+
+    .intro-mobile-background {
+        background-image: url(./images/bg-pattern-intro-left-mobile.svg);
+        background-position: top left;
+        background-repeat: no-repeat;
+        z-index: 5;
+    }
+    .intro-img{
+        top: 0;
+    }
+    .bottom,
+    .top{
+        flex-direction: column;
+        text-align: center;
+        padding: 10% 0%;
+        font-weight: 700;
+    }
+    footer {
+        background-image: url(./images/bg-pattern-footer-mobile.svg);
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: 100%;   
+    }
+    .footer-logo {
+        padding: 10%;
+        margin: 0 auto;
+    }
+    .bottom h5  {
+        padding: 10%;
+    }
+
+    h1.line:before {
+        display: none;
+    }
+    .line:before {
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+
+    }
+    #features .item{
+        padding: 0;
+    }
+}
+
