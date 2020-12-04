@@ -87,7 +87,8 @@ h1, h2 {
 .wrapper{
     position: relative;
 }
-.img-intro-left{
+.wrapper:before{
+    content: url(./images/bg-pattern-intro-left-desktop.svg);
     position: absolute;
     left: 0%;
     top: 70%;
@@ -96,7 +97,8 @@ h1, h2 {
     width: auto;
 }
 
-.img-intro-right{
+.wrapper:after{
+    content: url(./images/bg-pattern-intro-right-desktop.svg);
     position: absolute;
     top: 0%;
     right: 0%;
@@ -104,7 +106,9 @@ h1, h2 {
     height: 80%;
     width: auto;
 }
+
 .desktop-intro-image{
+ 
     height: 80%;
     width: auto;
 }
@@ -357,7 +361,8 @@ footer li a:hover {
         text-align: center;
         line-height: 1rem;
     }
-    .desktop-intro-image{
+    .wrapper:before, 
+    .wrapper::after {
         display: none;
     }
     h1, h2 {
